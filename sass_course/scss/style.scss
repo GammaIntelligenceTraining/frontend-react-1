@@ -1,0 +1,88 @@
+@import 'config';
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    // background-color: $light-color;
+    font-family: $font-stack;
+    line-height: 1.6;
+}
+img {
+    width: 100%;
+}
+a {
+    text-decoration: none;
+}
+.display {
+    @include set-background($main-color);
+    // background-color: $main-color;
+    // color: set-text-color($main-color);
+    padding: 0 30px;
+    height: 600px;
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            list-style-type: none;
+
+            li {
+                padding: 15px;
+            }
+            a:hover {
+                color: #666666;
+            }
+        }
+        a {
+            color: set-text-color($main-color);
+            font-weight: bold;
+        }
+    }
+    &-content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h1 {
+            font-size: 50px;
+        }
+        p {
+            margin: 20px 50px;
+        }
+    }
+    img {
+        width: 40%;
+    }
+    
+
+}
+
+$spaces: ('red', 'green', 'blue');
+
+@each $space in $spaces {
+    .bg-col-#{$space} {
+        background-color: #{$space}
+    }
+    // .m-#{$space} {
+    //     margin: #{$space}rem;
+    // }
+    // .my-#{$space} {
+    //     margin: #{$space}rem 0;
+    // }
+    // .p-#{$space} {
+    //     padding: #{$space}rem;
+    // }
+    // .py-#{$space} {
+    //     padding: #{$space}rem 0;
+    // }
+
+}
+
+@import 'utilities';
+@import 'buttons';
+@import 'mobile';
