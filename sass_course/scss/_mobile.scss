@@ -1,0 +1,25 @@
+@media(max-width: 700px){
+    .display {
+        height: 400px;
+
+        &-content {
+            text-align: center;
+
+            img {
+                display: none;
+            }
+        }
+    }
+}
+@media(max-width: 500px) {
+    .display {
+        &-content {
+            h1 {
+                font-size: 40px;
+            }
+        }
+    }
+    nav {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,22 @@
+// Font settings
+$font-stack: Arial, Helvetica, sans-serif;
+// Color settings
+$light-color: #ffe8d6;
+$main-color: #dadac2;
+// $main-color: #202019;
+$secondary-color: #ee9b00;
+
+// Set font color
+@function set-text-color($color) {
+    @if(lightness($color)) > 70 {
+        @return black;
+    } @else {
+        @return white;
+    }
+}
+
+// Set background and text
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}
